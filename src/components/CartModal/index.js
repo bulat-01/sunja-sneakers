@@ -1,18 +1,20 @@
+import styles from "./CartModal.module.scss";
+
 function CartModal() {
   return (
-    <div style={{ display: "none" }} className="overlay">
-      <div className="cart-modal d-flex flex-column">
+    <div style={{}} className="overlay">
+      <div className={`${styles.cartModal} d-flex flex-column`}>
         <h2 className="d-flex justify-between mb-30">
           Корзина{" "}
           <img
-            className="btn-remove"
+            className={styles.btnRemove}
             src="/assets/images/btn-remove.svg"
             alt="Remove"
           />
         </h2>
 
-        <div className="cart-items">
-          <div className="cart-item d-flex align-center p-20">
+        <div className={styles.cartItems}>
+          <div className={`${styles.cartItem} d-flex align-center p-20`}>
             <img
               className="mr-15"
               width={70}
@@ -27,13 +29,13 @@ function CartModal() {
             </div>
 
             <img
-              className="btn-remove"
+              className={styles.btnRemove}
               src="/assets/images/btn-remove.svg"
               alt="Remove"
             />
           </div>
 
-          <div className="cart-item d-flex align-center p-20">
+          <div className={`${styles.cartItem} d-flex align-center p-20`}>
             <img
               className="mr-15"
               width={70}
@@ -48,27 +50,27 @@ function CartModal() {
             </div>
 
             <img
-              className="btn-remove"
+              className={styles.btnRemove}
               src="/assets/images/btn-remove.svg"
               alt="Remove"
             />
           </div>
         </div>
 
-        <div className="cart-totals">
-          <div className="cart-totals__row d-flex align-end mb-20">
-            <div className="cart-totals__label">Итого: </div>
-            <div className="dash-line"></div>
-            <b className="cart-totals__value">21 498 руб. </b>
+        <div className={styles.cartTotals}>
+          <div className="d-flex align-end mb-20">
+            <div>Итого: </div>
+            <div className={styles.dashLine}></div>
+            <b>21 498 руб. </b>
           </div>
 
-          <div className="cart-totals__row d-flex align-end mb-40">
-            <div className="cart-totals__label">Налог 5%: </div>
-            <div className="dash-line"></div>
-            <b className="cart-totals__value">1074 руб. </b>
+          <div className="d-flex align-end mb-40">
+            <div>Налог 5%: </div>
+            <div className={styles.dashLine}></div>
+            <b>1074 руб. </b>
           </div>
 
-          <button className="green-button">
+          <button className={styles.greenButton}>
             Оформить заказ
             <img src="/assets/images/arrow.svg" alt="Arrow" />
           </button>
